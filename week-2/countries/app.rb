@@ -9,10 +9,10 @@ class Question < ActiveRecord::Base
  
 end   
 
-#get '/' do # this part is optional, so that something comes up when you don't specify a URI
-  #File.read(File.join('public', 'index.html'))
+get '/' do # this part is optional, so that something comes up when you don't specify a URI
+  File.read(File.join('public', 'index.html'))
   
-#end
+end
 
 get '/questions' do
     @questions = Question.all
