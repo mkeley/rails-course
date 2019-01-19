@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+
+gem 'sinatra'
+gem 'sinatra-contrib'
+gem 'sinatra-activerecord'
+gem 'rake'
+gem 'sqlite3'
+
+# See link for fixing bundler issue for export path: https://stackoverflow.com/questions/3914694/bundle-command-not-found
+
