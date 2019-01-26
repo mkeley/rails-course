@@ -1,0 +1,14 @@
+<center>
+<% if @contacts.length == 0 %>
+    <h4>No Results found</h4>
+<% else %>
+    <h3>Search Results for <%= params[:query] %></h3>
+        <% @contacts.each do |contact| %>
+            <div>
+                <%= contact.first_name %>
+                <%= contact.last_name %>
+                <%= contact.address %>
+            </div>    
+        <% end %>
+</center>
+<% end %>

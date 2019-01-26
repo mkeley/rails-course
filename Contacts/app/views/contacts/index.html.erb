@@ -1,0 +1,35 @@
+<center>
+<h2>Contacts</h2>
+<a href="contacts/new">New</a><br>
+<br>
+<form action="/search"method="get">
+    <input type="text" name="query" placeholder="Search ...">
+    <input type="submit" value="Search">
+</form><br>
+<% @contacts.each do |contact| %>
+    <div class="contacts">
+        
+
+        <div class="name">
+            <%= contact.first_name %>
+            <%= contact.last_name %>
+            <%= contact.phone %>
+        
+        </div><br>
+        <div class="email">
+            <%= contact.email %>
+        </div><br>
+        
+        <div class="address">
+            <%= contact.address %>
+	        <%= contact.city %>
+	        <%= contact.state %>
+	        <%= contact.zip %>
+	        <%= contact.save%> 
+        </div>
+        
+    </div>
+<% end %>    
+    
+    
+</center>
