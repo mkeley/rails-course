@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html>
+     <style> 
+     
+      body { 
+    
+      background-color:red;
+      }
+      p { 
+        font-family: monospace;
+        height: 80px;
+        width: 35px;
+      }
+  
+</style> 
+<center> 
   <head>
+ 
+</head>
+
+<head>
+  <div style="background-color:black;color:white;padding:20px;">
     <title>Contacts</title>
+    </div>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </div>
   </head>
-
+   
   <body>
+    <div style="background=color:red">
     <%= yield %>
+    </div>
   </body>
+ </center> 
 </html>
