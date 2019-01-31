@@ -1,5 +1,7 @@
 class IncidentsController < ApplicationController
-    	def new
+    
+    
+    def new
 		@incidents = Incident.new
 	end
 	# create incident

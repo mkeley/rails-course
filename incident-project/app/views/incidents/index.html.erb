@@ -1,0 +1,10 @@
+<a href="/incidents/new">New</a>
+<% @incidents.each do |incident| %>
+	<div>
+		<h4><%= incident.ticket_number %></h4>
+		Target_Date: <%= incident.target_date %>
+		<p>
+		      <%= incident.issue %>
+		 <a href= "/incidents/edit?id=<%= incident.id %>">Edit</a>
+	</div>
+<% end %>

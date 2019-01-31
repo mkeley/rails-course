@@ -1,0 +1,22 @@
+<form action="incidents/new" method="post">
+
+<div>
+	<input type="hidden" name="id" value="<%= @incident.id %>">
+	
+		<%= text_field_tag "incident", @incident.ticket_number, placeholder: "Ticket Number" %>
+		</div>
+		<div> 
+		<%= text_field_tag "target date", @incident.target_date, placeholder: "Target Date" %>
+		</div>
+
+		<div>
+		<%=text_field_tag"user it code", @incident.user_it_code, placeholder:"User IT Code" %>
+		</div>
+		<div>
+			
+			<%= text_area_tag "Issue", @incident.issue %>
+		</div>
+		<div>
+			<input type="submit" value="Save">
+		</div>
+	</form>

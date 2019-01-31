@@ -1,0 +1,21 @@
+<form action="/incidents" method="post">
+	<div>
+			
+		<input type="hidden" name="id" value="<%= @incident.id %>">
+		<input type="text" name="name" value="Ticket Number" placeholder="Ticket Number">
+
+		</div>
+		<div> 
+			<textarea name="Issue" placeholder="Issue Description"></textarea>
+		</div>
+		<div>
+			<input type="text" name="Target Date" placeholder="Target Date">
+		</div>
+			<input type="text" name="User IT Code" placeholder="User IT Code">
+		<div>	
+			
+		</div>
+		<div>
+			<input type="submit" value="Save">
+		</div>
+	</form>

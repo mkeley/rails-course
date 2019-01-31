@@ -3,8 +3,8 @@ class CreateIncidents < ActiveRecord::Migration[5.2]
     create_table :incidents do |t|
       t.integer :ticket_number
       t.string :issue
-      t.string :target_date
-      t.string :user_IT_code
+      t.string :traget_date
+      incident :user_it_code
       t.timestamps
     end
   end
