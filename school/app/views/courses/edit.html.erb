@@ -1,0 +1,20 @@
+
+
+<form action="courses/new" method="post">
+
+<div>
+	<input type="hidden" name="id" value="<%= @course.id %>">
+	
+		<%= text_field_tag "name", @course.name, placeholder: "Name" %>
+		</div>
+		<div> 
+		<%= text_field_tag "name", @course.location, placeholder: "Location" %>
+		</div>
+		<div>
+			
+			<%= text_area_tag "description", @course.description %>
+		</div>
+		<div>
+			<input type="submit" value="Save">
+		</div>
+	</form>
