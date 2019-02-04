@@ -24,7 +24,7 @@ class CoursesController < ApplicationController
 	
 	# send back form to edit
     def edit
-	    @courses = Course.find(params[:id])
+	    @course = Course.find(params[:id])
         course = Course.find(params[:id])
 		course.name = params[:name]
 		course.location = params[:location]
@@ -43,9 +43,7 @@ class CoursesController < ApplicationController
 		redirect_to '/courses'
 	end
 	
-	#def show
-	#	@courses = Course.new(params[:id])
-#	end
+
 	
 	# destroys table
     def destroy
@@ -53,5 +51,8 @@ class CoursesController < ApplicationController
 	    course.destroy
 	    redirect_to '/courses'
 	end
-
+	
+	def show
+		@course = Course.find(params[:id])
+	end
 end
