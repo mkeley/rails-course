@@ -1,0 +1,7 @@
+<%= form_for @order do |f| %>
+<%= f.text_field :street_address, placeholder: 'Street Address' %>
+<%= f.text_field :city, placeholder: 'City' %>
+<%= f.text_field :state, placeholder: 'State' %>
+<%= f.text_field :zip, placeholder: 'Zip' %>
+<%= f.submit 'Create' %>
+<% end %>

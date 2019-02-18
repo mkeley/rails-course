@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <center>
+    <head>
     <title>Restaurant</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+    
 
   <body>
+    <main class="container"></main>
+      
     <%= yield %>
   </body>
+    
+  </center>
+  
 </html>

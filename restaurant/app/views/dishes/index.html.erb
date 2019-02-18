@@ -1,0 +1,15 @@
+
+<h2>Your Dish List</h2>
+<%= link_to 'New', new_dish_path %>
+<% @dishes.each do |dish| %>
+	<div>
+		<% dish.name %>
+		<p><%= dish.description %></p><br>
+		<%= image_tag dish.picture, height: 100 %><br>
+		<%= dish.name %><br>
+        <%= dish.price %><br>
+        <%= link_to 'Edit', edit_dish_path(id: dish.id) %><br>
+
+
+	</div>
+<% end %>

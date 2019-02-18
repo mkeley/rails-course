@@ -1,0 +1,48 @@
+<center>
+<div class="row ml-8">
+    <div class="col-4 mt-1 ml-4 mr-4 p-3 mb-2 bg-primary">
+       <h2>MENU</h2>
+        <% @dishes.each do |dish| %>
+            <div class="media body  mt-3 ml-1 col py-3 px-md-5 border bg-light" >
+               
+                <%= image_tag dish.picture, height: 100, width: 100, class: 'nr-3 mb-8 border border-success' %>
+        
+                <div class="media-body">
+                    <h5 class="mt-2">
+                        <%= link_to 'Add', add_order_path(@order, dish_id: dish.id), method: :post, class: 'btn btn-primary btn-sm' %>
+                        <%= dish.name %>
+                    </h5>                      
+                    <h6>
+                        <%= dish.description %>
+                     </h6>
+                    <h7>$<%= dish.price %></h7>
+                        
+                </div>
+            </div>
+        <% end %>
+    </div>
+    <div class="col-6 mt-1 ml-6 mr-4 p-3 mb-2 bg-primary">
+      <h4>ORDER</h4>
+      <h5>Number of Items:<%= @order.order_dishes.length %></h5>
+        <% @order.order_dishes.each do |order_dish| %>
+            <div class="media mt-3 col py-3 px-md-5 border bg-light">
+                <%= image_tag order_dish.dish.picture, height: 50, width: 50, class: 'nr-3 mb-8 border border-success' %>
+                <div class="media body">
+                      <h6 class="ml-4">
+                        <%= link_to 'Remove', remove_order_path(@order, order_dish_id: order_dish.id), method: :delete, class: 'btn btn-danger btn-sm' %>
+                        <%= order_dish.dish.name %>
+                        $<%= order_dish.dish.price %> 
+                      </h6>
+                        <h6></h6>
+            
+                </div>
+            </div>
+        <% end %>
+        <h6 class="mt-2">Total: <%= @total %></h6>
+        <%= link_to 'Submit', submit_order_path(@order), method: :put, class: 'btn btn-success' %>
+    </div>
+</div>
+</center>
+
+
+
