@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class IncidentTest < ActiveSupport::TestCase
+class EngineerTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
